@@ -1,0 +1,49 @@
+body {
+  display: block;
+  box-sizing: border-box;
+}
+
+.post {
+  position: relative;
+  padding: 15px;
+  margin-top: 25px;
+  width: 500px;
+  height: 100%;
+  border: 1px solid black;
+  border-radius: 15px;
+}
+
+.comLi {
+  border: 1px dashed darkcyan;
+  padding-left: 8px;
+  padding-right: 5px;
+  margin-bottom: 8px;
+  border-radius: 6px;
+}
+
+.backGo {
+  position: sticky;
+  margin-left: 0px;
+  top: 15px;
+  right: 35px;
+  width: 50px;
+  transition: all 0.5s;
+  display: inline;
+  img:hover {
+  
+  transform: scale(1.5);}
+
+  p {
+    position: absolute;
+    display: inline;
+    margin-top: -10px;
+  }
+}
+
+.backGo:hover {
+  cursor: pointer;
+  transform: scale(1.5);
+}
+.h4 {
+  display: inline-block;
+}
