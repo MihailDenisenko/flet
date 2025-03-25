@@ -51,7 +51,7 @@ export default function Post({ posts, users, comments }) {
       <p>{post[0].body}</p>
       <h3>Author</h3>
       <p>{author}</p>
-      <h3 onClick={() => setComOpen(!comOpen)}>
+      <h3 onClick={() => setComOpen(!comOpen)} className={styles.comOpen}>
         {!comOpen ? "Comments... click to open" : "Comments... click to close"}
       </h3>
       {comOpen ? <ul>{commit}</ul> : ""}
