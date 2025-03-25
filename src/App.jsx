@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { Route, Routes } from "react-router";
-// import styles from "./App.module.scss";
+import styles from "./App.module.scss";
 import React from "react";
 import PostList from "./Components/PostList/PostList";
 import Post from "./Components/Post/Post";
@@ -31,20 +31,23 @@ function App() {
   }, []);
   // console.log(comments)
   return (
-    <Routes>
-      <Route
-        exact
-        path="/"
-        element={<PostList posts={posts} users={users} />}
-      />
-      <Route
-        exact
-        path="/:id/"
-        element={<Post posts={posts} users={users} comments={comments } />}
-      />
+    <>
+      <a className={styles.a} href="https://github.com/MihailDenisenko/flet">Просмотреть код</a>
+      <Routes>
+        <Route
+          exact
+          path="/"
+          element={<PostList posts={posts} users={users} />}
+        />
+        <Route
+          exact
+          path="/:id/"
+          element={<Post posts={posts} users={users} comments={comments} />}
+        />
 
-      <Route path="*" element={<h1>"Error Page"</h1>} />
-    </Routes>
+        <Route path="*" element={<h1>"Error Page"</h1>} />
+      </Routes>
+    </>
   );
 }
 
